@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.qtimes.wonly">
+    package="com.qtimes.pavilion">
     <!--    android:sharedUserId="android.uid.system"-->
 
     <!--读取短信-->
     <application
-        android:name="com.qtimes.wonly.app.App"
+        android:name="com.qtimes.pavilion.app.App"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +18,7 @@
         tools:replace="android:icon,android:roundIcon,android:theme">
 
         <activity
-            android:name="com.qtimes.wonly.activity.MainActivity"
+            android:name="com.qtimes.pavilion.activity.MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.qtimes.wonly" />
+                <category android:name="com.qtimes.pavilion" />
             </intent-filter>
         </activity>
 
@@ -46,12 +46,12 @@
             android:theme="@style/MyDialogStyle">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.qtimes.wonly" />
+                <category android:name="com.qtimes.pavilion" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name="com.qtimes.wonly.tip.QuDialogActivity"
+            android:name="com.qtimes.pavilion.tip.QuDialogActivity"
             android:launchMode="singleTask"
             android:theme="@style/V7DialogTheme" />
 
@@ -73,7 +73,7 @@
         <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；拉起服务被关闭，App 不会通过拉起服务拉起其他的 App，也不会被其他 App 拉起。 -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.qtimes.wonly"
+            android:authorities="com.qtimes.pavilion"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -84,12 +84,12 @@
         <!-- Required SDK核心功能-->
         <provider
             android:name="cn.jpush.android.service.DataProvider"
-            android:authorities="com.qtimes.wonly.DataProvider"
+            android:authorities="com.qtimes.pavilion.DataProvider"
             android:exported="false"
             android:process=":pushcore" />
 
         <!-- Required SDK核心功能-->
-        <receiver android:name=".update.ApkInstallReceiver">
+        <receiver android:name="com.qtimes.pavilion.update.ApkInstallReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <!--                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />-->
@@ -97,7 +97,7 @@
         </receiver>
 
         <receiver
-            android:name=".update.ApkInstalledReceiver"
+            android:name="com.qtimes.pavilion.update.ApkInstalledReceiver"
             android:enabled="true"
             android:exported="true"
             android:priority="1001">
@@ -107,7 +107,7 @@
         </receiver>
 
         <!-- Required SDK核心功能-->
-        <receiver android:name="com.qtimes.wonly.app.AndroidDialerReceiver">
+        <receiver android:name="com.qtimes.pavilion.app.AndroidDialerReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
 
@@ -124,7 +124,7 @@
 
         <!--开机启动-->
         <receiver
-            android:name="com.qtimes.wonly.app.BootReceiver"
+            android:name="com.qtimes.pavilion.app.BootReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="1000">
@@ -144,7 +144,7 @@
             android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
-                <category android:name="com.qtimes.wonly" />
+                <category android:name="com.qtimes.pavilion" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -170,7 +170,7 @@
             android:exported="false" />
         <!-- Required. AppKey copied from Portal -->
         <receiver
-            android:name="com.qtimes.wonly.app.JPushReceiver"
+            android:name="com.qtimes.pavilion.app.JPushReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -184,17 +184,17 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
                 <!-- 接收网络变化 连接/断开 since 1.6.3 -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
-                <category android:name="com.qtimes.wonly" />
+                <category android:name="com.qtimes.pavilion" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.qtimes.wonly.app.AlarmReceiver">
+        <receiver android:name="com.qtimes.pavilion.app.AlarmReceiver">
             <intent-filter>
-                <action android:name="com.qtimes.wonly.clock" />
+                <action android:name="com.qtimes.pavilion.clock" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.qtimes.ipc.service.WakeUpReceiver"
+            android:name="com.qtimes.service.WakeUpReceiver"
             android:process=":watch">
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -204,7 +204,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.qtimes.ipc.service.WakeUpReceiver$WakeUpAutoStartReceiver"
+            android:name="com.qtimes.service.WakeUpReceiver$WakeUpAutoStartReceiver"
             android:process=":watch">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -238,7 +238,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
-                <category android:name="com.qtimes.wonly" />
+                <category android:name="com.qtimes.pavilion" />
             </intent-filter>
         </service>
 
@@ -248,30 +248,30 @@
             android:exported="false"></service>
 
         <service
-            android:name="com.qtimes.ipc.service.AirService"
+            android:name="com.qtimes.service.PavilionService"
             android:persistent="true"
             android:priority="1000" />
 
-        <service android:name="com.qtimes.ipc.service.AbsWorkService$WorkNotificationService" />
+        <service android:name="com.qtimes.service.AbsWorkService$WorkNotificationService" />
 
         <service
-            android:name="com.qtimes.ipc.service.JobSchedulerService"
+            android:name="com.qtimes.service.JobSchedulerService"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:process=":watch" />
 
         <service
-            android:name="com.qtimes.ipc.service.WatchDogService"
+            android:name="com.qtimes.service.WatchDogService"
             android:process=":watch" />
 
         <service
-            android:name="com.qtimes.ipc.service.WatchDogService$WatchDogNotificationService"
+            android:name="com.qtimes.service.WatchDogService$WatchDogNotificationService"
             android:process=":watch" />
     </application>
 
     <permission
-        android:name="com.qtimes.wonly.permission.JPUSH_MESSAGE"
+        android:name="com.qtimes.pavilion.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.qtimes.permissions.DIALER_BROADCAST" />
@@ -286,7 +286,7 @@
 
     <!--极光推送-->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="com.qtimes.wonly.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.qtimes.pavilion.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />

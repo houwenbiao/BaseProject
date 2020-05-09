@@ -151,7 +151,7 @@ public static java.lang.String TABLENAME;
 -keepclassmembers class * {
    public <init> (org.json.JSONObject);
 }
--keep public class com.qtimes.wonly.R$*{
+-keep public class com.qtimes.pavilion.R$*{
 public static final int *;
 }
 # U-App end
@@ -247,12 +247,12 @@ public static final int *;
     <methods>;
 }
 
--keep class com.qtimes.wonly.bean.**{
+-keep class com.qtimes.pavilion.bean.**{
     <fields>;
     <methods>;
 }
 
--keep class com.qtimes.wonly.bean.dao.**{
+-keep class com.qtimes.pavilion.bean.dao.**{
     <fields>;
     <methods>;
 }
@@ -429,6 +429,6 @@ public static final int *;
     public static ** valueOf(java.lang.String);
 }
 
--keep public class com.qtimes.wonly.R$*{
+-keep public class com.qtimes.pavilion.R$*{
     public static final int *;
 }

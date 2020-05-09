@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.qtimes.wonly.views.swipe.SwipeMenuView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.qtimes.pavilion.views.swipe.SwipeMenuView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/y120"
     android:clickable="true"
@@ -61,4 +61,4 @@
         android:textColor="@android:color/white" />
 
 
-</com.qtimes.wonly.views.swipe.SwipeMenuView>
+</com.qtimes.pavilion.views.swipe.SwipeMenuView>

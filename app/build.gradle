@@ -10,7 +10,7 @@ android {
     buildToolsVersion globalConfiguration.getAt("buildToolsVersion")
 
     defaultConfig {
-        applicationId "com.qtimes.wonly"
+        applicationId "com.qtimes.pavilion"
         minSdkVersion globalConfiguration.getAt("minSdkVersion")
         targetSdkVersion globalConfiguration.getAt("targetSdkVersion")
         versionCode globalConfiguration.getAt("versionCode")

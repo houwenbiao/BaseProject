@@ -1,8 +1,8 @@
 <resources>
 
-    <string name="apk_name">WonlySmart</string>
-    <string name="app_name">WebView Q</string>
-    <string name="package_name">com.qtimes.wonly</string>
+    <string name="app_name">智慧收费亭</string>
+    <string name="apk_name">SmartPavilion</string>
+    <string name="package_name">com.qtimes.pavilion</string>
 
     <string name="host_close_adb">264616</string>
     <string name="host_open_adb">616462</string>
