@@ -1,0 +1,220 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Libraries
+    andjumpVersion = '0.1'
+    androidAnnotationsVersion = '1.+'
+    appcompatVersion = '1.+'
+    assertJVersion = '1.7.1'
+    autolayoutVersion = "1.4.5"//百分比布局
+    blurkitVersion = '1.0.0'
+    butterknifeCompilerVersion = '10.0.0'
+    butterKnifeVersion = '10.0.0'
+    cardviewVersion = '1.+'
+    circleImageViewVersion = '2.0.0'
+    CircularRevealVersion = '1.3.1@aar'
+    constraintVersion = '1.0.2'
+    convenientbannerVersion = '2.0.5'
+    customTabsVersion = '1.0.0'
+    daggerVersion = '2.0.2'
+    danmakuVersion = '0.5.0'
+    designVersion = '26.1.0'
+    dexmakerVersion = '1.0'
+    espressoVersion = '3.0.1'
+    eventbusVersion = '3.0.0'
+    fresco = '0.11.0'
+    frescoAnimated = '0.12.0'
+    frescoDrawee = '0.5.0'
+    frescoOkhttp = '0.5.0'
+    gifDrawableVersion = '1.2.3'
+    glideVersion = '3.7.0'
+    gsonVersion = '2.4'
+    jacksonVersion = '2.2.3'
+    javaxAnnotationVersion = '1.0'
+    jsrVersion = '3.0.0'
+    jUnitVersion = '4.12'
+    kotterknifeVersion = "0.1.0-SNAPSHOT"
+
+    //UI
+    statusBarVersion = "2.3.3"
+
+
+    //Development
+    leakcanaryVersion = '2.1'
+    logUtilsVersion = 'v1.2'
+    lRecyclerView = "1.5.4.3"
+    mockitoVersion = '1.9.5'
+    msgpackVersion = '0.6.12'
+    multidexVersion = '1.0.1'
+    okHttpIoVersion = '1.9.0'
+    okHttpVersion = '3.4.1'
+    reactAppCompat = '1.0.0'
+    reactNativeVersion = '0.31.0'
+    recyclerAnimatorsVersion = '2.2.1'
+    recyclerViewVersion = '1.+'
+    reservoirVersion = '2.1'
+    retrofit2Version = '2.5.0'
+    retrofitAdapterVersion = '2.5.0'
+    retrofitGsonVersion = '2.5.0'
+    robolectricVersion = '3.0'
+    rxAndroid2Version = '2.1.1'
+    rxAndroidVersion = '1.1.0'
+    rxBindingVersion = '0.4.0'
+    rxcameraVersion = "0.0.5"
+    rxjava2Version = '2.2.9'
+    rxJavaVersion = '1.1.2'
+    rxlifecycle = "0.6.1"
+    rxpermissionsVersion = '0.7.0@aar'
+    selectableroundedimageview = '1.0.1'
+    support = '26.1.0'
+    swipemenulistview = '1.3.0'
+    testingSupportLibVersion = '0.1'
+    testRunnerVersion = '1.0.1'
+    tflVersion = '0.0.0-nightly'
+    viewPagerVersion = 'v1.1.1'
+    websocketVersion = '1.28'
+    annotation = '1.1.0'
+    commonUtilsVersion = "1.1.3"
+    tusAndroidVersion = "0.1.9"
+    tusJavaVersion = "0.4.2"
+    p7zipVersion = "1.7.0"
+    fileDownloaderVersion = "1.7.7"
+    numberprogressbarVersion = "1.4@aar"
+    circleprogressVersion = "1.2.1"
+    smartrefreshVersion = "1.1.0"
+    niceSpinnerVersion = "1.4.4"
+    androidSpinKitVersion = "1.4.0"
+    kprogresshud = "1.0.2"
+    uMengAnalyticsVersion = "8.1.3"
+    uMengCommonVersion = "2.1.0"
+
+
+    developmentDependencies = [
+
+            kprogresshud              : "com.kaopiz:kprogresshud:${kprogresshud}",
+            androidSpinKitVersion     : "com.github.ybq:Android-SpinKit:${androidSpinKitVersion}",
+            niceSpinner               : "com.github.arcadefire:nice-spinner:${niceSpinnerVersion}",
+            SmartRefreshLayout        : "com.scwang.smartrefresh:SmartRefreshLayout:${smartrefreshVersion}",
+            SmartRefreshHeader        : "com.scwang.smartrefresh:SmartRefreshHeader:${smartrefreshVersion}",
+            numberprogressbar         : "com.daimajia.numberprogressbar:library:${numberprogressbarVersion}",
+            circleprogress            : "com.github.lzyzsd:circleprogress:${circleprogressVersion}",
+            filedownloader            : "com.liulishuo.filedownloader:library:${fileDownloaderVersion}",
+            p7zip                     : "com.hzy:libp7zip:${p7zipVersion}",
+            commonUtils               : "com.luffykou:android-common-utils:${commonUtilsVersion}",
+            tusAndroid                : "io.tus.android.client:tus-android-client:${tusAndroidVersion}",
+            tusJava                   : "io.tus.java.client:tus-java-client:${tusJavaVersion}",
+
+            andjumpApi                : "com.qt:andjump-api:${andjumpVersion}",
+            andjumpCompiler           : "com.qt:andjump-compiler:${andjumpVersion}",
+            annotation                : "androidx.annotation:annotation:${annotation}",
+
+            eventbus                  : "org.greenrobot:eventbus:${eventbusVersion}",
+            eventBusCompiler          : "org.greenrobot:eventbus-annotation-processor:${eventbusVersion}",
+            eventBusIndex             : "com.study.sangerzhong.studyapp.MyEventBusIndex",
+
+            convenientbanner          : "com.bigkoo:convenientbanner:${convenientbannerVersion}",
+            daggerCompiler            : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                    : "com.google.dagger:dagger:${daggerVersion}",
+
+            butterKnife               : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterknifeCompiler       : "com.jakewharton:butterknife-compiler:${butterknifeCompilerVersion}",
+
+            rxJava                    : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid                 : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            rxJava2                   : "io.reactivex.rxjava2:rxjava:${rxjava2Version}",
+            rxAndroid2                : "io.reactivex.rxjava2:rxandroid:${rxAndroid2Version}",
+            rxBinding                 : "com.jakewharton.rxbinding:rxbinding:${rxBindingVersion}",
+            rxBindingV7               : "com.jakewharton.rxbinding:rxbinding-appcompat-v7:${rxBindingVersion}",
+            rxBindingRecycler         : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${rxBindingVersion}",
+            rxBindingDesign           : "com.jakewharton.rxbinding:rxbinding-design:${rxBindingVersion}",
+            rxpermissions             : "com.tbruyelle.rxpermissions:rxpermissions:${rxpermissionsVersion}",
+
+            rxcamera                  : "com.ragnarok.rxcamera:lib:${rxcameraVersion}",
+            rxlifecycle               : "com.trello:rxlifecycle:${rxlifecycle}",
+
+            reactNative               : "com.facebook.react:react-native:${reactNativeVersion}",
+
+            javaxAnnotation           : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+
+            design                    : "com.google.android.material:material:${appcompatVersion}",
+            appcompat                 : "androidx.appcompat:appcompat:${appcompatVersion}",
+            constraint                : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            multidex                  : 'androidx.multidex:multidex:2.0.0',
+            support                   : "androidx.legacy:legacy-support-v4:${appcompatVersion}",
+
+            recyclerAnimation         : "jp.wasabeef:recyclerview-animators:${recyclerAnimatorsVersion}",
+            glide                     : "com.github.bumptech.glide:glide:${glideVersion}",
+            websocket                 : "com.neovisionaries:nv-websocket-client:${websocketVersion}",
+
+            circleImageView           : "de.hdodenhof:circleimageview:${circleImageViewVersion}",
+            statusBar                 : "com.github.niorgai:StatusBarCompat:${statusBarVersion}",
+
+            selectableroundedimageview: "com.joooonho:selectableroundedimageview:${selectableroundedimageview}",
+            CircularReveal            : "com.github.ozodrukh:CircularReveal:${CircularRevealVersion}",
+            customTabs                : 'androidx.browser:browser:${customTabsVersion}',
+
+            recyclerViewPager         : "com.github.lsjwzh.RecyclerViewPager:lib:${viewPagerVersion}",
+            danmaku                   : "com.github.ctiao:DanmakuFlameMaster:${danmakuVersion}",
+            blurkit                   : "com.wonderkiln:blurkit:${blurkitVersion}",
+            gifDrawable               : "pl.droidsonroids.gif:android-gif-drawable:${gifDrawableVersion}",
+
+            autolayout                : "com.zhy:autolayout:${autolayoutVersion}",
+            uMengAnalytics            : "com.umeng.umsdk:analytics:${uMengAnalyticsVersion}",
+            uMengCommon               : "com.umeng.umsdk:common:${uMengCommonVersion}",
+            logUtils                  : "com.github.houwenbiao:Utils:${logUtilsVersion}",
+            kotterKnife               : "com.jakewharton:kotterknife:${kotterknifeVersion}",
+            swipemenulistview         : "com.baoyz.swipemenulistview:library:${swipemenulistview}",
+            lRecyclerView             : "com.github.jdsjlzx:LRecyclerView:${lRecyclerView}",
+            tfl                       : "org.tensorflow:tensorflow-lite:${tflVersion}",
+
+            // developmentTestDependencies = [
+            mockito                   : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker                  : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito           : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso                  : "androidx.test.espresso:espresso-core:${espressoVersion}",
+            junit                     : "junit:junit:${jUnitVersion}",
+            testRunner                : "androidx.test:runner:${testRunnerVersion}",
+            leakcanary                : "com.squareup.leakcanary:leakcanary-android:${leakcanaryVersion}",
+            // ]
+
+            // utilsDependencies
+            fresco                    : "com.facebook.fresco:fresco:${fresco}",
+            frescoDrawee              : "com.facebook.fresco:drawee:${frescoDrawee}",
+            frescoOkhttp              : "com.facebook.fresco:imagepipeline-okhttp:${frescoOkhttp}",
+            frescoAnimated            : "com.facebook.fresco:animated-gif:${frescoAnimated}",
+            okHttp                    : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            // ]
+
+            // viewsDependencies = [
+            cardview                  : "androidx.cardview:cardview:${cardviewVersion}",
+            recyclerView              : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            // ]
+
+            // domainDependencies = [
+            retrofit2                 : "com.squareup.retrofit2:retrofit:${retrofit2Version}",
+            // ]
+
+            // domainTestDependencies = [
+
+            //]
+
+            // dataDependencies = [
+            loggingInterceptor        : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            gson                      : "com.google.code.gson:gson:${gsonVersion}",
+            retrofitGson              : "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}",
+            retrofitAdapter           : "com.squareup.retrofit2:adapter-rxjava:${retrofitAdapterVersion}",
+            androidAnnotations        : "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            reservoir                 : "com.anupcowkur:reservoir:${reservoirVersion}",
+            msgpack                   : "org.msgpack:msgpack:${msgpackVersion}",
+            // ]
+
+            // dataTestDependencies = [
+            assertj                   : "org.assertj:assertj-core:${assertJVersion}",
+            robolectric               : "org.robolectric:robolectric:${robolectricVersion}",
+            // ]
+    ]
+}

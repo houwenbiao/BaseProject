@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    publishNonDefault true
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("compileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("buildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("minSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("targetSdkVersion")
+        versionCode globalConfiguration.getAt("versionCode")
+        versionName globalConfiguration.getAt("versionName")
+        renderscriptTargetApi globalConfiguration.getAt("compileSdkVersion")
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    api developmentDependencies.appcompat
+    api developmentDependencies.recyclerView
+    api developmentDependencies.cardview
+    api developmentDependencies.design
+    api developmentDependencies.rxJava
+    api developmentDependencies.rxJava
+    api developmentDependencies.rxAndroid
+    api project(path: ':utils')
+}

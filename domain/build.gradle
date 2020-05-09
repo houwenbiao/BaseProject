@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    publishNonDefault true
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration.getAt("compileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("buildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("minSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("targetSdkVersion")
+        versionCode globalConfiguration.getAt("versionCode")
+        versionName globalConfiguration.getAt("versionName")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    api developmentDependencies.dagger
+    annotationProcessor developmentDependencies.daggerCompiler
+    compileOnly developmentDependencies.javaxAnnotation
+    api project(':utils')
+}
+repositories {
+    mavenCentral()
+}

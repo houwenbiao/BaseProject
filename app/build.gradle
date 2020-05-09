@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration.getAt("compileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("buildToolsVersion")
+
+    defaultConfig {
+        applicationId "com.qtimes.wonly"
+        minSdkVersion globalConfiguration.getAt("minSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("targetSdkVersion")
+        versionCode globalConfiguration.getAt("versionCode")
+        versionName globalConfiguration.getAt("versionName")
+        multiDexEnabled true
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -fexceptions"
+                arguments "-DANDROID_ARM_NEON=TRUE"
+            }
+        }
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "x86", "armeabi", "arm64-v8a"
+        }
+    }
+
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode = true
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/QtimesRelease.jks")
+                storePassword "Qtimes123456"
+                keyAlias "Qtimes"
+                keyPassword "Qtimes123456"
+                v2SigningEnabled false
+            } catch (ex) {
+                throw new Exception(ex.toString())
+            }
+        }
+
+        debug {
+            storeFile file("./keystore/QtimesDebug.jks")
+            storePassword "Qtimes123456"
+            keyAlias "Qtimes"
+            keyPassword "Qtimes123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+
+        /*Gradle 3.0之后需要注释掉这个，否则Unable to resolve dependency for......*/
+        /*lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }*/
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def name
+                if (outputFile.name.replace(".apk", "") == "app-debug") {
+                    name = "app"
+                } else {
+                    name = "app"
+                }
+                def fileName = outputFile.name.replace(name,
+                        "${defaultConfig.applicationId}_${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}")
+                outputFileName = fileName
+            }
+        }
+    }
+
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+    compileOptions {
+        sourceCompatibility javaSourceCompatibility
+        targetCompatibility javaTargetCompatibility
+    }
+}
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    //annotationProcessor:只在编译的时候执行依赖的库，但是库最终不打包到apk中
+    //Provided:是间接的得到了依赖的Library，运行的时候必须要保证这个Library的存在，否则就会崩溃，起到了避免依赖重复资源的作用
+    //compile:打包的时候是会打包进apk的
+    //api:完全等同于compile指令，没区别，你将所有的compile改成api，完全没有错（AndroidStudio3.0之后）
+    //implementation：只能在内部使用此模块，比如我在一个libiary中使用implementation依赖了gson库，然后我的主项目依赖了libiary，那么，我的主项目就无法访问gson库中的方法
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    //一次性引入libs目录下所有jar文件
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation developmentDependencies.junit
+    api developmentDependencies.appcompat
+    api developmentDependencies.constraint
+    api developmentDependencies.butterKnife
+    api developmentDependencies.kotterKnife
+    annotationProcessor developmentDependencies.butterknifeCompiler
+    api developmentDependencies.rxpermissions
+    api developmentDependencies.rxJava
+    api developmentDependencies.rxAndroid
+    implementation developmentDependencies.rxJava2
+    implementation developmentDependencies.rxAndroid2
+    api developmentDependencies.rxlifecycle
+    api developmentDependencies.multidex
+    api developmentDependencies.lRecyclerView
+    api developmentDependencies.dagger
+    implementation developmentDependencies.tusAndroid
+    implementation developmentDependencies.tusJava
+    implementation developmentDependencies.filedownloader
+    implementation developmentDependencies.numberprogressbar
+    implementation developmentDependencies.circleprogress
+    implementation developmentDependencies.SmartRefreshLayout
+    implementation developmentDependencies.SmartRefreshHeader
+    implementation developmentDependencies.niceSpinner
+    implementation developmentDependencies.androidSpinKitVersion
+    implementation developmentDependencies.kprogresshud
+    implementation developmentDependencies.uMengCommon
+    implementation developmentDependencies.uMengAnalytics
+    implementation(developmentDependencies.statusBar, {
+        exclude group: 'androidx.appcompat:appcompat'
+        exclude group: 'com.google.android.material:material'
+    })
+    annotationProcessor developmentDependencies.daggerCompiler
+    compileOnly developmentDependencies.javaxAnnotation
+    annotationProcessor developmentDependencies.andjumpCompiler
+    api developmentDependencies.andjumpApi
+    //极光
+    api files('libs/jcore-android-1.2.6.jar')
+    api files('libs/jpush-android-3.1.8.jar')
+    api files('libs/autobanh.jar')
+    api project(':data')
+    api project(':views')
+    implementation files('libs/esam.aar')
+}

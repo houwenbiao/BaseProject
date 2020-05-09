@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#04BD8F</color>
+    <color name="colorPrimaryDark">#04BD8F</color>
+    <color name="colorAccent">#04BD8F</color>
+    <color name="switch_color_off">#FF9C9B9A</color>
+    <color name="color_tab_1">#46094b</color>
+    <color name="color_tab_2">#2983d6</color>
+    <color name="color_tab_3">#296d61</color>
+    <color name="color_light_off">#ee8e26</color>
+    <color name="color_light_on">#ffcc00</color>
+
+    <color name="color_blown">#AD8F67</color>
+    <color name="color_blown_n">#90AD8F67</color>
+
+
+    <!--E.A.S.Y-->
+    <color name="base_circle_color">#90bcb9b4</color>
+    <color name="num_color">#90000000</color>
+    <color name="hour_color">#ee8e26</color>
+    <color name="E">#D2F18C</color>
+    <color name="A">#FFC78A</color>
+    <color name="S">#bcb9b4</color>
+    <color name="EAS">#50ee8e26</color>
+    <!-- 点赞爆心相关颜色 -->
+    <color name="heart_wave_color1">#FF6B00</color>
+    <color name="heart_wave_color2">#FFA600</color>
+    <color name="heart_wave_color3">#FF4BBDFE</color>
+    <color name="heart_wave_color4">#FFDDDDDD</color>
+    <color name="heart_wave_color5">#C2FFFF</color>
+    <color name="heart_wave_color6">#66FFFF</color>
+    <color name="heart_wave_color7">#D6FFAD</color>
+    <color name="heart_wave_color8">#99FF33</color>
+    <color name="heart_wave_color9">#ECD98C</color>
+    <color name="heart_wave_color10">#ECC012</color>
+    <color name="heart_wave_color11">#D9C5EC</color>
+    <color name="heart_wave_color12">#C095EC</color>
+    <color name="heart_wave_color13">#FFFF00</color>
+
+    <color name="black_half_Alpha">#80000000</color>
+    <color name="color_gift_des">#ffcc00</color>
+    <color name="white">#ffffff</color>
+    <color name="black_0.8">#CC000000</color>
+    <color name="orange">#ff7e00</color>
+
+
+    <color name="blue_metal">#3366cc</color>
+    <color name="pink_metal">#c8283c</color>
+    <color name="yellow_metal">#996600</color>
+
+    <color name="metal_bg_blue">#ccffff</color>
+    <color name="metal_bg_pink">#ffe2e7</color>
+    <color name="metal_bg_yellow">#ffffcc</color>
+
+
+    <color name="color_ff">#F0F0F0</color>
+    <color name="color_00">#8A000000</color>
+
+    <color name="default_header_color">#445566</color>
+
+    <color name="red_normal">#FF0000</color>
+    <color name="red_pressed">#FF6666</color>
+    <color name="green_normal">#37C000</color>
+    <color name="green_pressed">#30A070</color>
+    <color name="purple_normal">#9932CC</color>
+    <color name="purple_pressed">#9F79EE</color>
+
+    <color name="lightGray">#e0e0e0</color>
+    <color name="dark">#5e5656</color>
+    <color name="hint">#666262</color>
+    <color name="black">#000000</color>
+    <color name="divider">#c9cbcd</color>
+    <color name="disable">#f5f5f5</color>
+    <color name="background">#c9cbcd</color>
+    <color name="background_detail">#d2c3c7</color>
+    <color name="split">#eeeeee</color>
+    <color name="feed_text_color">#4a5158</color>
+    <color name="button_login_color">#3a7eec</color>
+    <color name="button_signup_color">#93b3d7</color>
+    <color name="background_login">#fafafa</color>
+    <color name="title_color">#2e2d2d</color>
+    <color name="des_color">#404346</color>
+    <color name="color_ff4a57">#ff4a57</color>
+    <color name="color_light_blue">#14acae</color>
+
+    <color name="blue_dark">#1983d1</color>
+    <color name="blue_black">#1673b8</color>
+
+    <color name="unauthenticated">#000000</color>
+    <color name="authenticated">#3a7eec</color>
+    <color name="unactivated">#000000</color>
+    <color name="activating">#3a7eec</color>
+    <color name="activated">#30A070</color>
+    <color name="failed">#FF0000</color>
+
+    <color name="authenticate_btn_text">#0099FF</color>
+
+    <!--Ticket-->
+    <color name="ticket_activity_bg">#F2F2F2</color>
+
+    <color name="ticket_button_bg_normal">#04BD8F</color>
+    <color name="ticket_button_bg_focused">#50BD8F</color>
+    <color name="ticket_button_text">#FFFFFF</color>
+
+    <color name="ticket_button_unClickable">#CCCCCC</color>
+
+    <color name="ticket_title_bg">#04BD8F</color>
+    <color name="ticket_title_color">#FFFFFF</color>
+
+    <color name="ticker_edit_text_border_normal">#c9c9c9</color>
+    <color name="ticker_edit_text_border_focused">#04BD8F</color>
+
+    <color name="ticket_status_closed">#04BD8F</color>
+    <color name="ticket_status_dealing">#FF924A</color>
+
+</resources>

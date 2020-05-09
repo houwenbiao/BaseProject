@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="myTheme">
+        <attr name="mwindowEnterTransition" format="reference" />
+        <attr name="mwindowExitTransition" format="reference" />
+        <attr name="toastLayout" format="reference" />
+        <attr name="dialogLayout" format="reference" />
+    </declare-styleable>
+</resources>

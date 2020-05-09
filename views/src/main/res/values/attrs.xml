@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Titlebar">
+        <!-- 项目中把下面这五项定义在styles.xml里 -->
+        <attr name="titlebar_leftAndRightTextColor" format="reference|color" />
+        <attr name="titlebar_titleTextColor" format="reference|color" />
+        <attr name="titlebar_leftAndRightTextSize" format="reference|dimension" />
+        <attr name="titlebar_titleTextSize" format="reference|dimension" />
+        <attr name="titlebar_leftAndRightPadding" format="reference|dimension" />
+
+        <!-- 下面这几项根据每个页面的业务写在layout中 -->
+
+        <attr name="titlebar_leftText" format="reference|string" />
+        <attr name="titlebar_rightText" format="reference|string" />
+        <attr name="titlebar_titleText" format="reference|string" />
+        <attr name="titlebar_hintText" format="reference|string" />
+        <attr name="titlebar_leftDrawable" format="reference" />
+        <attr name="titlebar_titleDrawable" format="reference" />
+        <attr name="titlebar_titleDrawable_right" format="reference" />
+        <attr name="titlebar_rightDrawable" format="reference" />
+        <!-- 当既有titleText，又有titleDrawable时，设置该属性 -->
+        <attr name="titlebar_titleDrawablePadding" format="reference|dimension" />
+        <!-- 当既有leftText，又有leftDrawable时，设置该属性 -->
+        <attr name="titlebar_leftDrawablePadding" format="reference|dimension" />
+        <!-- 当既有rightText，又有rightDrawable时，设置该属性 -->
+        <attr name="titlebar_rightDrawablePadding" format="reference|dimension" />
+        <!-- 下面三项通常情况下不用，使用默认值就好。某个界面标题特别长并且左右文字短或者左右文字特别长并且标题特别短时单独配置 -->
+        <attr name="titlebar_leftMaxWidth" format="reference|dimension" />
+        <attr name="titlebar_rightMaxWidth" format="reference|dimension" />
+        <attr name="titlebar_titleMaxWidth" format="reference|dimension" />
+        <!-- 标题文字是否为粗体，默认为true -->
+        <attr name="titlebar_isTitleTextBold" format="boolean" />
+        <!-- 左边文字是否为粗体，默认为false -->
+        <attr name="titlebar_isLeftTextBold" format="boolean" />
+        <!-- 右边文字是否为粗体，默认为false -->
+        <attr name="titlebar_isRightTextBold" format="boolean" />
+        <!--是否有分割线  -底部-->
+        <attr name="titlebar_divider" format="boolean" />
+    </declare-styleable>
+
+    <!-- 通用内容布局-->
+    <declare-styleable name="CommonContainer">
+        <!-- 加载布局 -->
+        <attr name="cc_layout_loading" format="reference" />
+        <!-- 空布局 -->
+        <attr name="cc_layout_empty" format="reference" />
+        <!--错误布局-->
+        <attr name="cc_layout_error" format="reference" />
+    </declare-styleable>
+
+    <!-- 带描边的textview -->
+    <declare-styleable name="StrokeTextView">
+        <attr name="stroke_text_color" format="color" />
+        <attr name="stroke_text_stroke_width" format="dimension" />
+    </declare-styleable>
+
+
+    <!--倒计时文本-->
+    <declare-styleable name="CountDownTextView">
+        <!--文本格式-->
+        <!-- 例如:%ds重新发送-->
+        <attr name="countdown_format" format="reference" />
+        <attr name="countdown_seconds" format="integer" />
+        <attr name="countdown_init_txt" format="reference" />
+        <attr name="countdown_init_txtcolor" format="reference" />
+        <attr name="countdown_txtcolor" format="reference" />
+    </declare-styleable>
+
+    <!--飘心-->
+    <declare-styleable name="HeartLayout">
+        <attr name="initX" format="dimension" />
+        <attr name="initY" format="dimension" />
+        <attr name="xRand" format="dimension" />
+        <attr name="animLengthRand" format="dimension" />
+        <attr name="xPointFactor" format="dimension" />
+        <attr name="animLength" format="dimension" />
+        <attr name="heart_width" format="dimension" />
+        <attr name="heart_height" format="dimension" />
+        <attr name="bezierFactor" format="integer" />
+        <attr name="anim_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="HeartWaveView">
+        <attr name="progressWidth" format="dimension" />
+        <attr name="progress_padding" format="dimension" />
+        <attr name="fontSize" format="dimension" />
+        <attr name="progressColor" format="color" />
+        <attr name="progressBgColor" format="color" />
+        <attr name="waterWaveColor" format="color" />
+        <attr name="waterWaveBgColor" format="color" />
+        <attr name="progress2WaterWidth" format="dimension" />
+        <attr name="showProgress" format="boolean" />
+        <attr name="showNumerical" format="boolean" />
+        <attr name="waveTextColor" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="waveTime" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ClipImageLayout">
+        <attr name="horiontalPadding" format="dimension" />
+    </declare-styleable>
+
+    <!--主页抖动按钮-->
+    <declare-styleable name="ShakeButton">
+        <attr name="text" format="reference|string" />
+        <attr name="drawable" format="reference" />
+        <attr name="drawablePadding" format="dimension" />
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="BlurLayout">
+        <attr name="downscaleFactor" format="float" />
+        <attr name="blurRadius" format="integer" />
+        <attr name="fps" format="integer" />
+    </declare-styleable>
+    <!--图表 -->
+    <declare-styleable name="LineChartView">
+        <attr name="horizontal_grid_step" format="integer" min="0" />
+        <attr name="vertical_grid_step" format="integer" min="0" />
+        <attr name="horizontal_grid_sublines_count" format="integer" min="0" />
+        <attr name="vertical_grid_sublines_count" format="integer" min="0" />
+        <attr name="vertical_grid" format="boolean" />
+        <attr name="vertical_grid_sublines" format="boolean" />
+        <attr name="horizontal_grid" format="boolean" />
+        <attr name="horizontal_grid_sublines" format="boolean" />
+        <attr name="horizontal_grid_color" format="color" />
+        <attr name="vertical_grid_color" format="color" />
+        <attr name="horizontal_grid_sublines_color" format="color" />
+        <attr name="vertical_grid_sublines_color" format="color" />
+        <attr name="horizontal_grid_thikness" format="dimension" />
+        <attr name="vertical_grid_thikness" format="dimension" />
+        <attr name="horizontal_grid_sublines_thikness" format="dimension" />
+        <attr name="vertical_grid_sublines_thikness" format="dimension" />
+        <attr name="horizontal_values" format="boolean" />
+        <attr name="vertical_values" format="boolean" />
+        <attr name="horizontal_values_color" format="color" />
+        <attr name="vertical_values_color" format="color" />
+        <attr name="horizontal_values_size" format="dimension" />
+        <attr name="vertical_values_size" format="dimension" />
+    </declare-styleable>
+</resources>

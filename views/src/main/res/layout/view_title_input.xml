@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_bg"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/ctv_titlebar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="85dp"
+        android:minWidth="30dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:text="back"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ctv_titlebar_input"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/input_bg"
+        android:cursorVisible="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:textColorHint="#cccccc"
+        android:textCursorDrawable="@drawable/shape_color_red"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/ctv_titlebar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="85dp"
+        android:minWidth="30dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:text="setting"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

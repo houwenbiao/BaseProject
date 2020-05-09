@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="id_mydialog_content" type="id" />
+    <item name="id_mydialog_title" type="id" />
+    <item name="id_mydialog_msg" type="id" />
+    <item name="id_mydialog_confirm" type="id" />
+    <item name="id_mydialog_cancel" type="id" />
+    <item name="id_mydialog_btn_divider" type="id" />
+    <item name="id_mydialog_input" type="id" />
+    <item name="id_mydialog_confirm_layout" type="id" />
+</resources>

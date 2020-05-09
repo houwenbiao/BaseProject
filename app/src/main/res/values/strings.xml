@@ -1,0 +1,66 @@
+<resources>
+
+    <string name="apk_name">WonlySmart</string>
+    <string name="app_name">WebView Q</string>
+    <string name="package_name">com.qtimes.wonly</string>
+
+    <string name="host_close_adb">264616</string>
+    <string name="host_open_adb">616462</string>
+
+    <!--dialog 说明-->
+    <string name="text_exit">再按一次返回退出</string>
+    <string name="txt_know">知道了</string>
+    <string name="txt_ignore">忽略</string>
+    <string name="txt_cancel">取消</string>
+    <string name="txt_confirm">确认</string>
+    <string name="user_name">用户名</string>
+    <string name="phone">手机号</string>
+
+    <!--upload-->
+    <string name="upload_success">文件上传成功！</string>
+    <string name="upload_failed">文件上传失败！</string>
+    <string name="upload_failed_5_times">文件重试5次扔上传失败！</string>
+    <string name="upload_failed_retry_later">文件上传失败，稍后重试！</string>
+    <string name="uploading">文件正在上传，请勿重复操作！</string>
+
+    <!--upgrade-->
+    <string name="file_not_exist">文件不存在</string>
+    <string name="check_update_failed">查询更新信息失败！</string>
+    <string name="lasted_version">已经是最新版本！</string>
+    <string name="start_download_apk">开始下载新版本！</string>
+    <string name="patch_downloading">补丁包正在下载！</string>
+    <string name="restart_app_patch_download">补丁包下载完成后请重启APP！</string>
+    <string name="auto_install_after_download">下载完成后自动安装！</string>
+    <string name="apk_downloading">新版本正在下载！</string>
+    <string name="apk_download_failed">新版本下载失败！</string>
+    <string name="install_success">新版本安装成功！</string>
+    <string name="install_base_pkg">安装基础包！</string>
+    <string name="install_failed_no_permission">无静默权限，安装新版本失败！</string>
+    <string name="install_failed_no_file">安装失败，安装文件不存在！</string>
+
+    <string name="system_info">系统信息</string>
+    <string name="please_wait">请稍等</string>
+
+    <string name="net_connect_err">当前网络连接异常，请检查网络连接！</string>
+    <string name="txt_please_checked_net">网络连接异常，是否跳转到网络设置界面？</string>
+    <string name="net_unconnected_warning">网络连接警告</string>
+
+
+    <string name="dev_authenticate_success">设备认证成功！</string>
+    <string name="dev_authenticate_failed">设备认证失败，请重新认证！</string>
+    <string name="dev_action_authenticate_again"><u>重新认证</u></string>
+    <string name="dev_status_unauthenticated">"设备未认证"</string>
+    <string name="dev_status_authenticating_toast">"设备认证中......\n请勿断开电源！"</string>
+    <string name="dev_status_authenticated">"设备已认证"</string>
+    <string name="dev_status_authenticate_failed">"设备认证失败"</string>
+
+    <string name="back">返回</string>
+    <string name="back_title">标题</string>
+    <string name="next_step">下一步</string>
+    <string name="other">其他</string>
+    <string name="create">创建</string>
+    <string name="solved">已解决</string>
+    <string name="closed">已关闭</string>
+    <string name="retry">重试</string>
+    <string name="query_error">查询失败</string>
+</resources>

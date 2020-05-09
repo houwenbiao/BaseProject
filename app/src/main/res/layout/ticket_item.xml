@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qtimes.wonly.views.swipe.SwipeMenuView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y120"
+    android:clickable="true"
+    android:paddingBottom="@dimen/y1">
+
+    <LinearLayout
+        android:id="@+id/swipe_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y118"
+        android:background="@drawable/selector_white_preferences_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/y10">
+
+        <ImageView
+            android:id="@+id/ticket_image"
+            android:layout_width="@dimen/y60"
+            android:layout_height="@dimen/y60"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_ticket" />
+
+        <TextView
+            android:id="@+id/ticket_id"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="id" />
+
+        <TextView
+            android:id="@+id/ticket_type"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="type" />
+
+        <TextView
+            android:id="@+id/ticket_status"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="status" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_ff4a57"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+
+</com.qtimes.wonly.views.swipe.SwipeMenuView>

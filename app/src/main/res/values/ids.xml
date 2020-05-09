@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="viewContainer" type="id" />
+
+    <!--Dialog id-->
+    <item name="dialog_content" type="id" />
+    <item name="dialog_title" type="id" />
+    <item name="dialog_msg" type="id" />
+    <item name="dialog_confirm" type="id" />
+    <item name="dialog_cancel" type="id" />
+    <item name="dialog_confirm_layout" type="id" />
+    <item name="dialog_head" type="id" />
+
+
+</resources>

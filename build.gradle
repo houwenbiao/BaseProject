@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'buildsystem/dependencies.gradle'
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext {
+    /**
+     * 编译版本必改
+     * 1.域名更改为正式服务器
+     * 2.添加uid做系统签名
+     */
+
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 23
+    targetSdkVersion = 27
+    versionCode = 2020050911
+    versionName = "1.0.0"
+    javaSourceCompatibility = JavaVersion.VERSION_1_8
+    javaTargetCompatibility = JavaVersion.VERSION_1_8
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        jcenter()
+        google()
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

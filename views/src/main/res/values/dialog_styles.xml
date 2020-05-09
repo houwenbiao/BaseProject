@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="mwindowEnterTransition">@anim/dialog_enter</item>
+        <item name="mwindowExitTransition">@anim/dialog_exit</item>
+        <item name="toastLayout">@layout/layout_toast</item>
+        <item name="dialogLayout">@layout/layout_dialog</item>
+    </style>
+</resources>
